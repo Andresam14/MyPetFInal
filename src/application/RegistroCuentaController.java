@@ -31,12 +31,7 @@ public class RegistroCuentaController {
     
 	@FXML
     void btnCrearCuenta(ActionEvent event) {
-		if(txtNombre.getText().isEmpty() || txtApellido.getText().isEmpty() || txtCelular.getText().isEmpty() || txtCorreo.getText().isEmpty()
-				|| txtPass.getText().isEmpty() || txtPassConfirmed.getText().isEmpty()) {
-			System.out.println("DIligenciar todos los campos");
-		} else {
-			System.out.println("Cuenta creada con exito");
-		}
+		validarCamposLlenos();
     }
 	
 	@FXML
@@ -52,8 +47,13 @@ public class RegistroCuentaController {
 		this.controlador = controlador;
 	}
 	
-	public void verificarNombre() {
-		
+	public void validarCamposLlenos() {
+		if(txtNombre.getText().isEmpty() || txtApellido.getText().isEmpty() || txtCelular.getText().isEmpty() || txtCorreo.getText().isEmpty()
+				|| txtPass.getText().isEmpty() || txtPassConfirmed.getText().isEmpty()) {
+			System.out.println("Diligenciar todos los campos");
+		} else {
+			System.out.println("Cuenta creada con exito");
+		}
 	}
 	
 }
