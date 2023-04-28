@@ -12,12 +12,12 @@
    <children>
       <Pane prefHeight="588.0" prefWidth="400.0" style="-fx-background-color: #98D8AA;">
          <children>
-            <TextField layoutX="183.0" layoutY="121.0" />
-            <TextField layoutX="183.0" layoutY="160.0" />
-            <TextField layoutX="183.0" layoutY="201.0" />
-            <TextField layoutX="183.0" layoutY="244.0" />
-            <PasswordField layoutX="183.0" layoutY="282.0" />
-            <PasswordField layoutX="183.0" layoutY="325.0" />
+            <TextField fx:id="txtNombre" layoutX="183.0" layoutY="121.0" />
+            <TextField fx:id="txtApellido" layoutX="183.0" layoutY="160.0" />
+            <TextField fx:id="txtCelular" layoutX="183.0" layoutY="201.0" />
+            <TextField fx:id="txtCorreo" layoutX="183.0" layoutY="244.0" />
+            <PasswordField fx:id="txtPass" layoutX="183.0" layoutY="282.0" />
+            <PasswordField fx:id="txtPassConfirmed" layoutX="183.0" layoutY="325.0" />
             <Label layoutX="149.0" layoutY="53.0" text="REGISTRO CUENTA">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -53,8 +53,8 @@
                   <Font name="System Bold Italic" size="15.0" />
                </font>
             </Label>
-            <Button layoutX="141.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnCrearCuenta" prefHeight="48.0" prefWidth="125.0" text="Crear Cuenta" />
-            <Button layoutX="141.0" layoutY="467.0" mnemonicParsing="false" onAction="#btnBack" prefHeight="48.0" prefWidth="125.0" text="Back" />
+            <Button layoutX="64.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnCrearCuenta" prefHeight="48.0" prefWidth="125.0" text="Crear Cuenta" />
+            <Button layoutX="217.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnBack" prefHeight="48.0" prefWidth="125.0" text="Back" />
          </children>
       </Pane>
    </children>

@@ -20,12 +20,12 @@ public class ControladorEscenarios {
 	public void cargarInicio() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("Inicio.fxml"));
+			loader.setLocation(getClass().getResource("InicioFinal.fxml"));
 			anchorpane = (AnchorPane) loader.load();
 			Scene scene = new Scene(anchorpane);
 			stagePrincipal.setScene(scene);
 			stagePrincipal.show();
-			InicioController c = loader.getController() ;
+			InicioFinalController c = loader.getController() ;
 			c.setControlador(this);
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -82,6 +82,7 @@ public class ControladorEscenarios {
 			loader.setLocation(getClass().getResource("RegistroMascotaPerro.fxml"));
 			anchorpane =  (AnchorPane) loader.load();
 			Scene scene = new Scene(anchorpane);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stagePrincipal.setScene(scene);
 			RegistroMascotaPerroController c = loader.getController();
 			c.setControlador(this);

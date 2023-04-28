@@ -17,7 +17,7 @@ public class RegistroMascotaPerroController {
 	
     @FXML
     void btnBack(ActionEvent event) {
-    	controlador.cargarInicio();
+    	controlador.cargarRegistroMascota1();
     }
 	
 }

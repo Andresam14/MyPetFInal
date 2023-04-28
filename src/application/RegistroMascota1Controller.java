@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 
 public class RegistroMascota1Controller implements Initializable{
 	
@@ -27,7 +28,7 @@ public class RegistroMascota1Controller implements Initializable{
 	
 	@FXML
 	void btnContnu(ActionEvent event) {
-		controlador.cargarRegistroPerro();
+		ObtenerInfoChoiceBox();
 	}
 	
 	@FXML
@@ -39,10 +40,16 @@ public class RegistroMascota1Controller implements Initializable{
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
 		tipoMascota.getItems().addAll(pets);
-
+		
 	}
-	
-	
-	
+		
+	public void ObtenerInfoChoiceBox() {
+		if(tipoMascota.getValue() == "Perro"){
+			controlador.cargarRegistroPerro();
+		}
+		else if(tipoMascota.getValue() == "Gato") {
+			controlador.cargarInicio();
+		}	
+	}
 	
 }
