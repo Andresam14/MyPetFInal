@@ -22,7 +22,7 @@
    <children>
       <Pane layoutX="14.0" layoutY="14.0" prefHeight="588.0" prefWidth="400.0" style="-fx-background-color: #98D8AA; -fx-border-color: #FF6D60;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="91.0" layoutY="49.0" text="BIENVENIDO A MYPET">
+            <Label layoutX="61.0" layoutY="49.0" text="BIENVENIDO A MY BEST PET">
                <font>
                   <Font name="Bodoni MT Condensed Bold" size="22.0" />
                </font>
@@ -43,9 +43,9 @@
                   </RadialGradient>
                </textFill>
             </Label>
-            <ImageView fitHeight="118.0" fitWidth="92.0" layoutX="156.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="Img" fitHeight="145.0" fitWidth="195.0" layoutX="102.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/WhatsApp%20Image%202023-04-16%20at%206.45.12%20PM.jpeg" />
+                  <Image url="@../img/Logo.png" />
                </image>
             </ImageView>
             <VBox fx:id="panelDeInicio" layoutX="50.0" layoutY="241.0" prefHeight="225.0" prefWidth="300.0">
@@ -55,7 +55,7 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtUsuario" prefHeight="32.0" prefWidth="300.0" promptText="mypet@gmail.com">
+                  <TextField fx:id="txtUsuario" prefHeight="32.0" prefWidth="300.0" promptText="mypet@gmail.com" style="-fx-background-color: transparent; -fx-border-style: none none solid none; -fx-border-color: gray;">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -68,14 +68,14 @@
                         <Insets top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <StackPane>
+                  <StackPane style="-fx-background-color: transparent;">
                      <children>
-                        <PasswordField fx:id="txtPass" prefHeight="32.0" prefWidth="300.0" promptText="1234">
+                        <PasswordField fx:id="txtPass" prefHeight="32.0" prefWidth="300.0" promptText="1234" style="-fx-background-color: #98D8AA; -fx-border-color: gray;">
                            <StackPane.margin>
                               <Insets top="5.0" />
                            </StackPane.margin>
                         </PasswordField>
-                        <TextField fx:id="txtPassMask" prefHeight="32.0" prefWidth="300.0" promptText="1234">
+                        <TextField fx:id="txtPassMask" prefHeight="32.0" prefWidth="300.0" promptText="1234" style="-fx-background-color: #98D8AA; -fx-border-color: gray;" visible="false">
                            <StackPane.margin>
                               <Insets top="5.0" />
                            </StackPane.margin></TextField>

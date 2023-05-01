@@ -23,7 +23,7 @@ public class InicioFinalController implements Initializable {
 	public void setControlador(ControladorEscenarios controlador) {
 		this.controlador = controlador;
 	}
-	
+	    
     @FXML
     private VBox panelDeInicio;
     
@@ -46,7 +46,7 @@ public class InicioFinalController implements Initializable {
     private TextField txtUsuario;
 
     @FXML
-    void btnIngresar(ActionEvent event) {
+    void btnIngresar(ActionEvent event) {    	
     	controlador.cargarMiMascota();
     }
 
@@ -73,5 +73,9 @@ public class InicioFinalController implements Initializable {
 		maskPassword(txtPass, txtPassMask, VerPass);
 		
 	}
+	
+	
+	
 
+	
 }

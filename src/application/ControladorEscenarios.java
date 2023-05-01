@@ -3,7 +3,6 @@ package application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class ControladorEscenarios {
@@ -16,6 +15,7 @@ public class ControladorEscenarios {
 		this.stagePrincipal = stagePrincipal;
 		cargarInicio();
 	}
+	
 	
 	public void cargarInicio() {
 		try {
@@ -45,6 +45,12 @@ public class ControladorEscenarios {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void guardarRegistro() {
+		RegistroCuentaController myclase = new RegistroCuentaController();
+		myclase.guardarInformacion();
+		
 	}
 	
 	public void cargarMiMascota() {

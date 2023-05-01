@@ -2,12 +2,16 @@ package application;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class RegistroCuentaController {
 
 	ControladorEscenarios controlador;
+	
+	@FXML
+    private Label labelCuentaCreada;
 	
     @FXML
     private TextField txtApellido;
@@ -27,7 +31,9 @@ public class RegistroCuentaController {
     @FXML
     private PasswordField txtPassConfirmed;
     
-    private String nombre, apellido, celular, correo, password, confirmedPassword;
+    private String nombre, apellido, celular,  correo,  password,  confirmedPassword;
+    
+    
     
 	@FXML
     void btnCrearCuenta(ActionEvent event) {
@@ -46,14 +52,26 @@ public class RegistroCuentaController {
 	public void setControlador(ControladorEscenarios controlador) {
 		this.controlador = controlador;
 	}
-	
+		
 	public void validarCamposLlenos() {
 		if(txtNombre.getText().isEmpty() || txtApellido.getText().isEmpty() || txtCelular.getText().isEmpty() || txtCorreo.getText().isEmpty()
 				|| txtPass.getText().isEmpty() || txtPassConfirmed.getText().isEmpty()) {
-			System.out.println("Diligenciar todos los campos");
+			labelCuentaCreada.setText("POR FAVOR DILIGENCIE TODOS LOS CAMPOS");
 		} else {
-			System.out.println("Cuenta creada con exito");
+			guardarInformacion();
+			labelCuentaCreada.setText("SU CUENTA HA SIDO CREADA CON EXITO");
 		}
+		
+	}
+	
+	public void guardarInformacion() {
+		nombre = txtNombre.getText();
+		apellido = txtApellido.getText();
+		celular = txtCelular.getText();
+		correo = txtCorreo.getText();
+		password = txtPass.getText();
+		confirmedPassword = txtPassConfirmed.getText();
+		
 	}
 	
 }
