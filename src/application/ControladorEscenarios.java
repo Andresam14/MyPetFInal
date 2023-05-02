@@ -97,4 +97,19 @@ public class ControladorEscenarios {
 		}
 	}
 	
+	public void cargarRegistroGato() {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(getClass().getResource("RegistroMascotaGato.fxml"));
+			anchorpane =  (AnchorPane) loader.load();
+			Scene scene = new Scene(anchorpane);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stagePrincipal.setScene(scene);
+			RegistroMascotaGatoController c = loader.getController();
+			c.setControlador(this);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 }

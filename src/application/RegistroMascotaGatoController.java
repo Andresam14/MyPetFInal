@@ -1,6 +1,9 @@
 package application;
 
-public class MascotaPerroController {
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+
+public class RegistroMascotaGatoController {
 	
 	ControladorEscenarios controlador;
 
@@ -12,4 +15,9 @@ public class MascotaPerroController {
 		this.controlador = controlador;
 	}
 	
+    @FXML
+    void btnBack(ActionEvent event) {
+    	controlador.cargarRegistroMascota1();
+    }
+
 }

@@ -48,7 +48,7 @@ public class RegistroMascota1Controller implements Initializable{
 			controlador.cargarRegistroPerro();
 		}
 		else if(tipoMascota.getValue() == "Gato") {
-			controlador.cargarInicio();
+			controlador.cargarRegistroGato();
 		}	
 	}
 	
