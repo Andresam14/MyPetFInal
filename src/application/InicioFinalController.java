@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
@@ -44,10 +45,19 @@ public class InicioFinalController implements Initializable {
 
     @FXML
     private TextField txtUsuario;
+    
+    @FXML
+    private Label labelIngreso;
+    
+   
 
     @FXML
-    void btnIngresar(ActionEvent event) {    	
-    	controlador.cargarMiMascota();
+    void btnIngresar() {
+    	if(txtUsuario.getText().isEmpty() || txtPass.getText().isEmpty() || txtPassMask.getText().isEmpty()) {
+    		labelIngreso.setText("Favor diligenciar correo y contraseña");
+    	}else {
+    		controlador.cargarMiMascota();
+    	}
     }
 
     @FXML

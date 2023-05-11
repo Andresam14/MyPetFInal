@@ -29,15 +29,17 @@ public class RegistroCuentaController {
     private PasswordField txtPass;
 
     @FXML
-    private PasswordField txtPassConfirmed;
-    
-    private String nombre, apellido, celular,  correo,  password,  confirmedPassword;
-    
-    
+    private PasswordField txtPassConfirmed;    
     
 	@FXML
     void btnCrearCuenta(ActionEvent event) {
-		validarCamposLlenos();
+		if(validarCamposLlenos()) {
+			controlador.cargarMiMascota();
+		} else {
+			labelCuentaCreada.setText("POR FAVOR DILIGENCIE TODOS LOS CAMPOS");
+		}
+		
+		
     }
 	
 	@FXML
@@ -53,25 +55,17 @@ public class RegistroCuentaController {
 		this.controlador = controlador;
 	}
 		
-	public void validarCamposLlenos() {
+	public boolean validarCamposLlenos() {
 		if(txtNombre.getText().isEmpty() || txtApellido.getText().isEmpty() || txtCelular.getText().isEmpty() || txtCorreo.getText().isEmpty()
 				|| txtPass.getText().isEmpty() || txtPassConfirmed.getText().isEmpty()) {
 			labelCuentaCreada.setText("POR FAVOR DILIGENCIE TODOS LOS CAMPOS");
+			return false;
 		} else {
-			guardarInformacion();
 			labelCuentaCreada.setText("SU CUENTA HA SIDO CREADA CON EXITO");
+			return true;
 		}
 		
 	}
 	
-	public void guardarInformacion() {
-		nombre = txtNombre.getText();
-		apellido = txtApellido.getText();
-		celular = txtCelular.getText();
-		correo = txtCorreo.getText();
-		password = txtPass.getText();
-		confirmedPassword = txtPassConfirmed.getText();
-		
-	}
 	
 }

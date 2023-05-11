@@ -3,7 +3,7 @@ package application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-public class RegistroMascotaPerroController {
+public class MascotaPerroController {
 	
 	ControladorEscenarios controlador;
 
@@ -16,13 +16,22 @@ public class RegistroMascotaPerroController {
 	}
 	
     @FXML
-    void btnBack(ActionEvent event) {
-    	controlador.cargarRegistroMascota1();
+    void btnAgregarImage(ActionEvent event) {
+
     }
-    
+
     @FXML
-    void btnGuardar(ActionEvent event) {
-    	controlador.cargarInfoMascotaPerro();
+    void btnBack(ActionEvent event) {
+    	controlador.cargarMiMascota();
     }
-	
+
+    @FXML
+    void btnIndSalud(ActionEvent event) {
+    	
+    }
+
+    @FXML
+    void btnRegistroMedico(ActionEvent event) {
+    	
+    }
 }

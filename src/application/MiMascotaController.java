@@ -14,12 +14,12 @@ public class MiMascotaController {
 
     @FXML
     void btnContinuar(ActionEvent event) {
-
+    	
     }
 
     @FXML
     void btnElegirMascota1(ActionEvent event) {
-    	
+    	controlador.cargarInfoMascotaPerro();
     }
     
     @FXML
@@ -33,7 +33,5 @@ public class MiMascotaController {
 
 	public void setControlador(ControladorEscenarios controlador) {
 		this.controlador = controlador;
-	}
-    
-    
+	}    
 }

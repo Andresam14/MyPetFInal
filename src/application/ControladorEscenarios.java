@@ -48,9 +48,6 @@ public class ControladorEscenarios {
 	}
 	
 	public void guardarRegistro() {
-		RegistroCuentaController myclase = new RegistroCuentaController();
-		myclase.guardarInformacion();
-		
 	}
 	
 	public void cargarMiMascota() {
@@ -106,6 +103,20 @@ public class ControladorEscenarios {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stagePrincipal.setScene(scene);
 			RegistroMascotaGatoController c = loader.getController();
+			c.setControlador(this);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void cargarInfoMascotaPerro() {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(getClass().getResource("MascotaPerro.fxml"));
+			anchorpane = (AnchorPane) loader.load();
+			Scene scene = new Scene(anchorpane);
+			stagePrincipal.setScene(scene);
+			MascotaPerroController c = loader.getController();
 			c.setControlador(this);
 		} catch (Exception e) {
 			e.printStackTrace();
